@@ -13,6 +13,7 @@
             background-image: url("https://s2-redeglobo.glbimg.com/nAlb8hUEfiN7iRxIb0Jk5Yyv3XY=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2022/t/B/yFPYpRQZa1S8hNE9nt5w/lindoia.jpg");
             height: 300px;
             background-size: cover;
+            background-position: center;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -37,6 +38,16 @@
         .collapse:not(.show) {
             display: none;
         }
+        .card-header {
+            cursor: pointer;
+        }
+        .card-header::after {
+            content: '\25bc';
+            float: right;
+        }
+        .collapse.show .card-header::after {
+            content: '\25b2'; /* Change to arrow up */
+        }
     </style>
 </head>
 <body>
@@ -45,7 +56,7 @@
             <a class="navbar-brand" href="#">
                 <img src="https://www.aguasdelindoia.com.br/assets/img/logotipo.png" alt="Logo Águas de Lindóia" class="navbar-logo">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -77,10 +88,13 @@
                 <div class="card-body">
                     <h6>Manhã (09:00 - 12:00)</h6>
                     <p>Chegada ao Hotel Monte Real, situado na Rua São Paulo, 622. Utilize a manhã para acomodação e um tour guiado pelas instalações do hotel. As crianças podem brincar na área de jogos dedicada.</p>
+                    <img src="https://source.unsplash.com/450x300/?hotel,family" alt="Hotel Monte Real">
                     <h6>Tarde (14:00 - 17:00)</h6>
                     <p>Visite o Balneário Municipal, localizado na Rua Rio de Janeiro, 480. Aproveite as piscinas de águas medicinais com espaços seguros e agradáveis para crianças. Conta com estacionamento por R$ 15,00 o dia e lanchonete no local.</p>
-                    <h6>Noite (19:00 - 21:00)</h6
+                    <img src="https://source.unsplash.com/450x300/?spa,pool" alt="Balneário Municipal">
+                    <h6>Noite (19:00 - 21:00)</h6>
                     <p>Jantar no restaurante do hotel, oferecendo um menu especial para crianças e várias opções saudáveis para toda a família.</p>
+                    <img src="https://source.unsplash.com/450x300/?family,dinner" alt="Jantar no Hotel">
                 </div>
             </div>
         </div>
@@ -94,10 +108,13 @@
                 <div class="card-body">
                     <h6>Manhã (08:00 - 11:00)</h6>
                     <p>Visite o Parque Cavalinho Branco, localizado na Av. Cavalinho Branco. Ideal para caminhadas matinais e contato com a natureza, o parque oferece vistas panorâmicas da cidade e áreas para piquenique. Entrada gratuita.</p>
+                    <img src="https://source.unsplash.com/450x300/?park" alt="Parque Cavalinho Branco">
                     <h6>Tarde (13:00 - 16:00)</h6>
                     <p>Relaxe nas Thermas de Lindóia, que oferece uma variedade de tratamentos terapêuticos e piscinas termais. Localizada na Rua das Acácias, 90, oferece pacotes de day use a partir de R$ 100 por adulto, crianças até 5 anos não pagam.</p>
+                    <img src="https://source.unsplash.com/450x300/?spa" alt="Thermas de Lindóia">
                     <h6>Noite (18:00 - 20:00)</h6>
                     <p>Desfrute de um jantar temático no Restaurante do Lago, com pratos típicos da região e uma vista encantadora do lago. Localizado na Av. das Nações, o restaurante é famoso por sua truta fresca.</p>
+                    <img src="https://source.unsplash.com/450x300/?restaurant,view" alt="Restaurante do Lago">
                 </div>
             </div>
         </div>
@@ -111,12 +128,15 @@
                 <div class="card-body">
                     <h6>Manhã (09:00 - 12:00)</h6>
                     <p>Explore o Museu Histórico de Águas de Lindóia, localizado no centro da cidade, próximo à Praça Adhemar de Barros. O museu conta a história da região e sua fama pelas águas terapêuticas. Entrada gratuita.</p>
+                    <img src="https://source.unsplash.com/450x300/?museum" alt="Museu Histórico de Águas de Lindóia">
                     <h6>Tarde (14:00 - 17:00)</h6>
                     <p>Passeio pela Praça Adhemar de Barros, aproveite para visitar o mercado de artesanato local, ideal para encontrar lembranças e produtos regionais. A praça também possui um pequeno lago com aluguel de pedalinhos.</p>
+                    <img src="https://source.unsplash.com/450x300/?city,park" alt="Praça Adhemar de Barros">
                     <h6>Noite (19:00 - 22:00)</h6>
                     <p>Participe de uma sessão de cinema ao ar livre, oferecida pelo hotel durante os meses de verão. Uma seleção de filmes familiares será exibida, complementada por pipoca e bebidas.</p>
+                    <img src="https://source.unsplash.com/450x300/?outdoor,cinema" alt="Cinema ao ar livre">
                 </div>
-            </div>
+            </div
         </div>
 
         <!-- Dia 4 -->
@@ -128,6 +148,7 @@
                 <div class="card-body">
                     <h6>Manhã (09:00 - 11:00)</h6>
                     <p>Desfrute de um último café da manhã no hotel e finalize a preparação para o check-out. Aproveite para tirar fotos finais nos jardins do hotel.</p>
+                    <img src="https://source.unsplash.com/450x300/?hotel,breakfast" alt="Café da manhã no hotel">
                     <h6>Partida (12:00)</h6>
                     <p>Check-out do hotel e partida. Esperamos que tenham uma viagem segura de volta e agradecemos pela visita!</p>
                 </div>
