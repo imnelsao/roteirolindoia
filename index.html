@@ -12,6 +12,19 @@
       body {
         background-color: #f8f9fa;
       }
+      .box-image {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 350px;           /* Altura máxima fixa */
+    overflow: hidden;        /* Oculta partes da imagem que excedam a altura máxima */
+}
+
+.box-image img {
+    width: 100%;             /* Ajusta a imagem para preencher a largura do contêiner */
+    height: auto;            /* Mantém a proporção da imagem */
+    min-height: 100%;        /* Garante que a altura mínima seja a do contêiner */
+}
       .hero-banner {
         background-image: url("https://s2-redeglobo.glbimg.com/nAlb8hUEfiN7iRxIb0Jk5Yyv3XY=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_b58693ed41d04a39826739159bf600a0/internal_photos/bs/2022/t/B/yFPYpRQZa1S8hNE9nt5w/lindoia.jpg");
         height: 300px;
