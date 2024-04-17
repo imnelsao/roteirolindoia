@@ -411,15 +411,22 @@
       function toggleText(event, button) {
         event.preventDefault(); // Impede o comportamento padrão do link
         var container = button.previousElementSibling;
-        if (container.style.maxHeight) {
-          container.style.maxHeight = null;
+        // Define a altura para a qual o texto deve colapsar, mantendo parte do texto visível
+        var collapsedHeight = "120px"; // Pode ajustar esse valor conforme necessário
+
+        if (
+          container.style.maxHeight &&
+          container.style.maxHeight !== collapsedHeight
+        ) {
+          container.style.maxHeight = collapsedHeight; // Colapsa o conteúdo para a altura definida
           button.textContent = "Ler mais";
         } else {
-          container.style.maxHeight = container.scrollHeight + "px";
+          container.style.maxHeight = container.scrollHeight + "px"; // Expande o conteúdo
           button.textContent = "Ler menos";
         }
       }
     </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
